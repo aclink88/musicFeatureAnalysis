@@ -204,16 +204,14 @@ values for each feature by decade. We produced the following table which
 gave us a high level understanding of which features were in the data
 and how the values looked for each feature.
 
-![](images/decadeSummaries.png){width="6.380208880139983in"
-height="2.3645833333333335in"}
+![](images/decadeSummaries.png)
 
 After looking at the averages for each feature, we decided to look at
 the trends for each feature over time. This graph along with the
 previously mentioned table helped us determine what information each
 feature should reflect as we began the model building process.
 
-![](images/featuresLine.png){width="4.963542213473316in"
-height="2.8715365266841646in"}
+![](images/featuresLine.png)
 
 ## Models
 
@@ -299,8 +297,7 @@ of the five models that we had run. The multinomial logistic regression
 had the second highest test accuracy followed by the One vs. Rest
 Logistic Regression model.
 
-![](images/modelAccuracies.png){width="4.715115923009624in"
-height="4.223958880139983in"}
+![](images/modelAccuracies.png)
 
 Had we been looking at a dataset with more categorical data to predict
 which decade the songs were in, we believe the accuracies of the models
