@@ -31,124 +31,22 @@ includes over 174,000 tracks, ranging from release years of 1920 to
 name, Spotify track ID and release date), as well as various audio
 features, described in detail in the table below.
 
-  ------------------ ------------------------------------ ----------------- --------------
-  Feature            Description                          Type              Range
-
-  Acousticness       A confidence measure of whether the  Float             0.0 to 1.0
-                     track is acoustic. 1.0 represents                      
-                     high confidence the track is                           
-                     acoustic.                                              
-
-  Danceability       Danceability describes how suitable  Float             0.0 to 1.0
-                     a track is for dancing based on a                      
-                     combination of musical elements                        
-                     including tempo, rhythm stability,                     
-                     beat strength, and overall                             
-                     regularity. A value of 0.0 is least                    
-                     danceable and 1.0 is most danceable.                   
-
-  Duration           Duration of the track in             Integer           4,937 to
-                     milliseconds.                                          5,338,302
-
-  Energy             Represents a perceptual measure of   Float             0.0 to 1.0
-                     intensity and activity. Typically,                     
-                     energetic tracks feel fast, loud,                      
-                     and noisy. For example, death metal                    
-                     has high energy, while a Bach                          
-                     prelude scores low on the scale.                       
-                     Perceptual features contributing to                    
-                     this attribute include dynamic                         
-                     range, perceived loudness, timbre,                     
-                     onset rate, and general entropy.                       
-
-  Explicit           Whether or not the track has         Integer/ Boolean  0 or 1
-                     explicit lyrics (1=yes it does;0= no                   
-                     it does not OR unknown)                                
-
-  Instrumentalness   Predicts whether a track contains no Float             0.0 to 1.0
-                     vocals. "Ooh" and "aah" sounds are                     
-                     treated as instrumental in this                        
-                     context. Rap or spoken word tracks                     
-                     are clearly "vocal". The closer the                    
-                     instrumentalness value is to 1.0,                      
-                     the greater likelihood the track                       
-                     contains no vocal content. Values                      
-                     above 0.5 are intended to represent                    
-                     instrumental tracks, but confidence                    
-                     is higher as the value approaches                      
-                     1.0.                                                   
-
-  Key                The key the track is in. Integers    Integer           0 to 11
-                     map to pitches using standard Pitch                    
-                     Class notation . E.g. 0 = C, 1 =                       
-                     C♯/D♭, 2 = D, and so on.                               
-
-  Liveness           Detects the presence of an audience  Float             0.0 to 1.0
-                     in the recording. Higher liveness                      
-                     values represent an increased                          
-                     probability that the track was                         
-                     performed live. A value above 0.8                      
-                     provides strong likelihood that the                    
-                     track is live.                                         
-
-  Loudness           The overall loudness of a track in   Float             -60.0 to 3.855
-                     decibels (dB). Loudness values are                     
-                     averaged across the entire track and                   
-                     are useful for comparing relative                      
-                     loudness of tracks. Loudness is the                    
-                     quality of a sound that is the                         
-                     primary psychological correlate of                     
-                     physical strength (amplitude).                         
-                     Values typical range between -60 and                   
-                     0 db.                                                  
-
-  Mode               Indicates the modality (major or     Integer/Boolean   0 or 1
-                     minor) of a track, the type of scale                   
-                     from which its melodic content is                      
-                     derived. Major is represented by 1                     
-                     and minor is 0.                                        
-
-  Popularity         The popularity is calculated by      Integer           0 to 100
-                     algorithm and is based, in the most                    
-                     part, on the total number of plays                     
-                     the track has had and how recent                       
-                     those plays are. Generally speaking,                   
-                     songs that are being played a lot                      
-                     now will have a higher popularity                      
-                     than songs that were played a lot in                   
-                     the past.                                              
-
-  Speechiness        Detects the presence of spoken words Float             0.0 to 1.0
-                     in a track. The more exclusively                       
-                     speech-like the recording (e.g. talk                   
-                     show, audio book, poetry), the                         
-                     closer to 1.0 the attribute value.                     
-                     Values above 0.66 describe tracks                      
-                     that are probably made entirely of                     
-                     spoken words. Values between 0.33                      
-                     and 0.66 describe tracks that may                      
-                     contain both music and speech,                         
-                     either in sections or layered,                         
-                     including such cases as rap music.                     
-                     Values below 0.33 most likely                          
-                     represent music and other                              
-                     non-speech-like tracks.                                
-
-  Tempo              The overall estimated tempo of a     Float             0.0 to 1.0
-                     track in beats per minute (BPM). In                    
-                     musical terminology, tempo is the                      
-                     speed or pace of a given piece and                     
-                     derives directly from the average                      
-                     beat duration.                                         
-
-  Valence            A measure describing the musical     Float             0.0 to 1.0
-                     positiveness conveyed by a track.                      
-                     Tracks with high valence sound more                    
-                     positive (e.g. happy, cheerful,                        
-                     euphoric), while tracks with low                       
-                     valence sound more negative (e.g.                      
-                     sad, depressed, angry).                                
-  ------------------ ------------------------------------ ----------------- --------------
+|Feature|Description|Type|Range|
+|:----|:----|:----|:----|
+|Acousticness |A confidence measure of whether the track is acoustic. 1.0 represents high confidence the track is acoustic.|Float|0.0 to 1.0|
+|Danceability|Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0.0 is least danceable and 1.0 is most danceable.|Float|0.0 to 1.0|
+|Duration|Duration of the track in milliseconds.|Integer|4,937 to 5,338,302|
+|Energy|Represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy.|Float|0.0 to 1.0|
+|Explicit|Whether or not the track has explicit lyrics (1=yes it does;0= no it does not OR unknown)|Integer/ Boolean|0 or 1|
+|Instrumentalness|Predicts whether a track contains no vocals. “Ooh” and “aah” sounds are treated as instrumental in this context. Rap or spoken word tracks are clearly “vocal”. The closer the instrumentalness value is to 1.0, the greater likelihood the track contains no vocal content. Values above 0.5 are intended to represent instrumental tracks, but confidence is higher as the value approaches 1.0.|Float|0.0 to 1.0|
+|Key|The key the track is in. Integers map to pitches using standard Pitch Class notation . E.g. 0 = C, 1 = C♯/D♭, 2 = D, and so on.|Integer|0 to 11|
+|Liveness|Detects the presence of an audience in the recording. Higher liveness values represent an increased probability that the track was performed live. A value above 0.8 provides strong likelihood that the track is live.|Float|0.0 to 1.0|
+|Loudness|The overall loudness of a track in decibels (dB). Loudness values are averaged across the entire track and are useful for comparing relative loudness of tracks. Loudness is the quality of a sound that is the primary psychological correlate of physical strength (amplitude). Values typical range between -60 and 0 db.|Float|-60.0 to 3.855|
+|Mode|Indicates the modality (major or minor) of a track, the type of scale from which its melodic content is derived. Major is represented by 1 and minor is 0.|Integer/Boolean|0 or 1|
+|Popularity|The popularity is calculated by algorithm and is based, in the most part, on the total number of plays the track has had and how recent those plays are. Generally speaking, songs that are being played a lot now will have a higher popularity than songs that were played a lot in the past.|Integer|0 to 100|
+|Speechiness|Detects the presence of spoken words in a track. The more exclusively speech-like the recording (e.g. talk show, audio book, poetry), the closer to 1.0 the attribute value. Values above 0.66 describe tracks that are probably made entirely of spoken words. Values between 0.33 and 0.66 describe tracks that may contain both music and speech, either in sections or layered, including such cases as rap music. Values below 0.33 most likely represent music and other non-speech-like tracks.|Float|0.0 to 1.0|
+|Tempo|The overall estimated tempo of a track in beats per minute (BPM). In musical terminology, tempo is the speed or pace of a given piece and derives directly from the average beat duration.|Float|0.0 to 1.0|
+|Valence|A measure describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).|Float|0.0 to 1.0|
 
 ### Data Preprocessing
 
