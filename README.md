@@ -1,14 +1,14 @@
-Prediction of Song Decade based on Song's Audio Features
+# Prediction of Song Decade based on Song's Audio Features
 
 Name: Alex Link
 
-Abstract
+## Abstract
 
 This analysis explores which models accurately predict the decade in
 which a song was produced using audio features made up of both
 categorical and numerical data.
 
-Introduction
+## Introduction
 
 Jeff Titon, professor emeritus of music at Brown University, has
 described ethnomusicology as the study of people making music; making
@@ -22,7 +22,7 @@ classify music into the decade it was produced, using the audio features
 that comprise each song, and see if this could shed some light on how
 music has evolved over the past one hundred years.
 
-Data
+## Data
 
 Our dataset was downloaded from Kaggle[^1], but the data itself was
 originally pulled from Spotify via their Web API in December 2020. It
@@ -150,7 +150,7 @@ features, described in detail in the table below.
                      sad, depressed, angry).                                
   ------------------ ------------------------------------ ----------------- --------------
 
-Data Preprocessing
+### Data Preprocessing
 
 Since the goal of our project was to see if a song's decade of release
 could be determined via its audio features, our target variable of
@@ -167,7 +167,7 @@ performed on the overall dataset (not including scaling or bucketization
 for certain models), as the dataset did not have any missing values or
 improperly formatted variables.
 
-Feature Selection
+### Feature Selection
 
 The purpose of our model was to see if a music's decade could be
 predicted purely based on its audio features; that is, features that
@@ -183,7 +183,7 @@ Three other categorical features, which could also contribute to
 explaining the musical elements of a track were also included. These
 were explicit, key and mode.
 
-Training Methodology
+### Training Methodology
 
 All character or time based variables were eliminated from the dataset
 including popularity. The Song ID was kept in the modeling data to
@@ -197,14 +197,14 @@ Each model had access to all of the features that could be expressed as
 continuous or binary variables. However, training metrics were used to
 identify the optimal feature subset for each model.
 
-Exploratory Data Analysis
+## Exploratory Data Analysis
 
 To begin our initial data exploration, we first looked at the average
 values for each feature by decade. We produced the following table which
 gave us a high level understanding of which features were in the data
 and how the values looked for each feature.
 
-![](media/image1.png){width="6.380208880139983in"
+![](images/decadeSummaries.png){width="6.380208880139983in"
 height="2.3645833333333335in"}
 
 After looking at the averages for each feature, we decided to look at
@@ -212,15 +212,10 @@ the trends for each feature over time. This graph along with the
 previously mentioned table helped us determine what information each
 feature should reflect as we began the model building process.
 
-![](media/image2.png){width="4.963542213473316in"
+![](images/featuresLine.png){width="4.963542213473316in"
 height="2.8715365266841646in"}
 
-![](media/image3.png){width="1.0416666666666666e-2in"
-height="1.0416666666666666e-2in"}![](media/image3.png){width="1.0416666666666666e-2in"
-height="1.0416666666666666e-2in"}![](media/image3.png){width="1.0416666666666666e-2in"
-height="1.0416666666666666e-2in"}
-
-Models
+## Models
 
 **Random Forest (RF):**
 
@@ -294,7 +289,7 @@ existed within the test set but not in the training set thus skewing the
 performance of the classification. The estimation error is attributed to
 this occurrence as well as the discretisation strategy.
 
-Results
+## Results
 
 After running each model, we discovered that the accuracies for each
 model were lower than we had thought when we first started our data
@@ -304,14 +299,14 @@ of the five models that we had run. The multinomial logistic regression
 had the second highest test accuracy followed by the One vs. Rest
 Logistic Regression model.
 
-![](media/image4.png){width="4.715115923009624in"
+![](images/modelAccuracies.png){width="4.715115923009624in"
 height="4.223958880139983in"}
 
 Had we been looking at a dataset with more categorical data to predict
 which decade the songs were in, we believe the accuracies of the models
 would have increased.
 
-Future Work
+## Future Work
 
 As stated in the previous section, we would like to possibly bring in
 more data that would contain a larger amount of categorical features to
@@ -330,7 +325,7 @@ only begin to predict which decade certain songs belong to, but also to
 start exploring the text within the lyrics themselves to determine how
 the words for each decade changed over time.
 
-Conclusions
+## Conclusions
 
 In conclusion, the accuracies of all of the models that we built were
 relatively low to what we were expecting. With more categorical data as
